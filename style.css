@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -10,122 +10,145 @@
 body {
   width: 100%;
   height: 100vh;
-  padding: 10px;
-  background: linear-gradient(to bottom, #5A67D8 0%, #68EACC 100%);
+  padding: 20px;
+  background: linear-gradient(135deg, #c3ecfa, #e6e9f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
-  background: #fff;
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  max-width: 480px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 header {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
   text-align: center;
-  color: #333;
-  margin-bottom: 10px;
+  color: #2f3e46;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 .tabs {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
-  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
 .tab {
   flex: 1;
-  padding: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
   text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background: #d9d9d9;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  color: #333;
 }
 
 .tab.active {
-  background: #8E49E8;
-  color: #fff;
+  background: #00b4d8;
+  color: white;
+  font-weight: 600;
+  border-color: #00b4d8;
 }
 
 .inputField {
   display: flex;
-  margin: 15px 0;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 input {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 button {
-  padding: 10px;
-  margin-left: 5px;
-  background: #8E49E8;
-  color: #fff;
+  padding: 12px 16px;
+  background-color: #00b4d8;
+  color: white;
+  font-weight: 600;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0077b6;
 }
 
 .todoList {
-  max-height: 200px;
+  max-height: 250px;
   overflow-y: auto;
   list-style: none;
+  padding-right: 5px;
 }
 
 .todoList li {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  background: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.todoList li:hover {
+  transform: translateY(-2px);
 }
 
 .todoList li.done {
+  background-color: rgba(230, 255, 230, 0.9);
   text-decoration: line-through;
-  color: #999;
+  color: #357a38;
+  border-left: 4px solid #00c853;
+}
+
+.todoList li.active {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-left: 4px solid #00b4d8;
+}
+
+.todoList li .actions {
+  display: flex;
+  gap: 10px;
 }
 
 .todoList li .icon {
-  margin-left: 10px;
   cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.todoList li .icon:hover {
+  color: #ff5c5c;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #555;
 }
-
-.todoList li {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background: #f2f2f2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-  
-.todoList li .actions {
-  display: flex;
-  gap: 10px;
-}
-  
-.todoList li.done {
-  text-decoration: line-through;
-  color: #e15555;
-}
-  
